@@ -530,13 +530,13 @@ class SiteController extends Controller
             $scriptTo = $clientFolder . $script;
             if (!file_exists($scriptTo)) {
                 if (copy($scriptFrom, $scriptTo)) {
-                    $command = 'mysql --host=' . Yii::$app->db->host
-                        . ' --user=' . Yii::$app->db->username
-                        . ' --password=\'' . Yii::$app->db->password . '\''
-                        . ' --database=' . Yii::$app->db->dbname
-                        . ' --execute="SOURCE ' . $scriptTo . '"';
-                    $result = shell_exec($command);
-                    SisEventsController::registrarEvento("Banco de dados acaba de ser atualizado! Script: $script", 'AtualizacaoBD', (!Yii::$app->user->isGuest ? Yii::$app->user->identity->id : 0));
+                    // $command = 'mysql --host=' . Yii::$app->db->host
+                    //     . ' --user=' . Yii::$app->db->username
+                    //     . ' --password=\'' . Yii::$app->db->password . '\''
+                    //     . ' --database=' . Yii::$app->db->dbname
+                    //     . ' --execute="SOURCE ' . $scriptTo . '"';
+                    // $result = shell_exec($command);
+                    // SisEventsController::registrarEvento("Banco de dados acaba de ser atualizado! Script: $script", 'AtualizacaoBD', (!Yii::$app->user->isGuest ? Yii::$app->user->identity->id : 0));
                 } else {
                     $result = "Não foi possível criar: $scriptTo";
                     Yii::$app->session->setFlash('success', Yii::t('yii', "Não foi possível aplicar uma atualização!"));

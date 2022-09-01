@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">        
             <?php
-            $model = explode("\n", shell_exec('git log -a --format=%h;%at;%cn;%s;%b'));
+            $model = [''];//explode("\n", shell_exec('git log -a --format=%h;%at;%cn;%s;%b'));
             $i = 0;
             foreach ($model as $linhas) {
                 if (count($linha = explode(";", $linhas)) == 5) {
