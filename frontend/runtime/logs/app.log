@@ -3806,3 +3806,102 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1662036802.7446
     'REQUEST_TIME' => 1662036802
 ]
+2022-09-01 10:29:51 [::1][1][0f8r78ujugo9er7gmsv3864i3f][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\models\DeskUsers::username in C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('username')
+#1 C:\Fontes\htdocs\mgfolha.com.br\common\mail\newUserToAdm-html.php(8): yii\db\BaseActiveRecord->__get('username')
+#2 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Fontes\\htdoc...')
+#3 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Fontes\\htdoc...', Array)
+#4 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Fontes\\htdoc...', Array, Object(yii\swiftmailer\Mailer))
+#5 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\mail\BaseMailer.php(302): yii\base\View->render('newUserToAdm-ht...', Array, Object(yii\swiftmailer\Mailer))
+#6 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\mail\BaseMailer.php(188): yii\mail\BaseMailer->render('newUserToAdm-ht...', Array, 'layouts/html')
+#7 C:\Fontes\htdocs\mgfolha.com.br\frontend\controllers\DeskUsersController.php(371): yii\mail\BaseMailer->compose(Array, Array)
+#8 [internal function]: frontend\controllers\DeskUsersController->actionGetDeskversao(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+#9 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('get-deskversao', Array)
+#12 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('desk-users/get-...', Array)
+#13 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\Fontes\htdocs\mgfolha.com.br\index.php(23): yii\base\Application->run()
+#15 {main}
+2022-09-01 10:29:47 [::1][1][0f8r78ujugo9er7gmsv3864i3f][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'uLast' => '/admin-consignacoes'
+    '_ga' => 'GA1.1.499248834.1662035239'
+    '_gid' => 'GA1.1.1085167887.1662035239'
+    'folha-frontend' => '0f8r78ujugo9er7gmsv3864i3f'
+    '_csrf-frontend' => 'f60a5ccc985cee2d080faec1e5fd23eb22a37b466687fffe69756cfbd43ca4eea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"2BgJwEjfe7XAoc0II9y_7xdHwfktCUb7\";}'
+    '_csrf-pagamentos' => 'fc5f5889ab7badd3ac8e082361123aec1a8a476bcc11a09468254d5278ee50bda:2:{i:0;s:16:\"_csrf-pagamentos\";i:1;s:32:\"ykvE-HkuIgUTujc4UkGgqizn7FtKaZ-z\";}'
+    '_gat_gtag_UA_164156382_1' => '1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'MeTSoIhG1W_jBK8Uyah2rifygkk_wxYL'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Microsoft Edge\";v=\"104\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 Edg/104.0.1293.70'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => 'uLast=%2Fadmin-consignacoes; _ga=GA1.1.499248834.1662035239; _gid=GA1.1.1085167887.1662035239; folha-frontend=0f8r78ujugo9er7gmsv3864i3f; _csrf-frontend=f60a5ccc985cee2d080faec1e5fd23eb22a37b466687fffe69756cfbd43ca4eea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%222BgJwEjfe7XAoc0II9y_7xdHwfktCUb7%22%3B%7D; _csrf-pagamentos=fc5f5889ab7badd3ac8e082361123aec1a8a476bcc11a09468254d5278ee50bda%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22_csrf-pagamentos%22%3Bi%3A1%3Bs%3A32%3A%22ykvE-HkuIgUTujc4UkGgqizn7FtKaZ-z%22%3B%7D; _gat_gtag_UA_164156382_1=1'
+    'PATH' => 'C:\\Program Files (x86)\\Embarcadero\\RAD Studio\\7.0\\bin;D:\\TomMe\\OneDrive\\Documentos\\RAD Studio\\7.0\\Bpl;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jre1.8.0_333\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PowerShell\\7\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/7.4.29 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/7.4.29'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Fontes/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Fontes/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Fontes/htdocs/mgfolha.com.br/index.php'
+    'REMOTE_PORT' => '53388'
+    'REDIRECT_URL' => '/mgfolha.com.br/desk-users/get-deskversao'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/mgfolha.com.br/desk-users/get-deskversao'
+    'SCRIPT_NAME' => '/mgfolha.com.br/index.php'
+    'PHP_SELF' => '/mgfolha.com.br/index.php'
+    'REQUEST_TIME_FLOAT' => 1662038987.2479
+    'REQUEST_TIME' => 1662038987
+]
