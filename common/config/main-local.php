@@ -14,16 +14,16 @@ $components = [
         //     'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=mgfolha_olhodaguagrande',
         //     'dbname' => 'mgfolha_olhodaguagrande',
         // ],
-        'igaci' => [
-            'class' => 'common\components\ConnectionExtra',
-            'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=tommen22_folhaigaci',
-            'dbname' => 'tommen22_folhaigaci',
-        ],
-        // 'cacimbinhas_antigo' => [
+        // 'igaci' => [
         //     'class' => 'common\components\ConnectionExtra',
-        //     'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=mgfolha_cacimbinhasantigo',
-        //     'dbname' => 'mgfolha_cacimbinhasantigo',
+        //     'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=tommen22_folhaigaci',
+        //     'dbname' => 'tommen22_folhaigaci',
         // ],
+        'cacimbinhas_antigo' => [
+            'class' => 'common\components\ConnectionExtra',
+            'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=tommen22_folhacacimbinhas',
+            'dbname' => 'tommen22_folhacacimbinhas',
+        ],
         //        'ftp' => [ 
         //            'class' => 'yii\ftp\Connection',
         //            'username_ftp' => 'lynkos', 

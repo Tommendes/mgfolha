@@ -14,13 +14,13 @@ class Clientes
         //     'servicos' => ['pagamentos', 'cash'],
         //     'dominios' => ['ativos',],
         // ],
-        'igaci' => [
-            'servicos' => ['pagamentos'],
-            'dominios' => ['ativos',],
-        ],
-        // 'cacimbinhas_antigo' => [
+        // 'igaci' => [
         //     'servicos' => ['pagamentos'],
         //     'dominios' => ['ativos',],
         // ],
+        'cacimbinhas_antigo' => [
+            'servicos' => ['pagamentos'],
+            'dominios' => ['ativos',],
+        ],
     ];
 }
