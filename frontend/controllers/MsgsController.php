@@ -113,7 +113,7 @@ class MsgsController extends Controller {
         $retorno = false;
         if (($model_first = Msgs::find()
                 ->where([
-                    is_numeric($id) ? 'id' : 's lug' => $id
+                    is_numeric($id) ? 'id' : 'slug' => $id
                 ])
                 ->one()) != null) {
             $model_first->status = Msgs::STATUS_LIDA;
