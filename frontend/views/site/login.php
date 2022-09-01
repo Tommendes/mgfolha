@@ -25,7 +25,7 @@ $this->title = 'Acesso ao sistema';
 
         <?= $form->field($modelLogin, 'rememberMe')->checkbox() ?>
 
-        <?= $form->field($modelLogin, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha2::className(), ['widgetOptions' => ['id' => Yii::$app->security->generateRandomString(8)]])->label(false) ?>
+        <?php //echo $form->field($modelLogin, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha2::className(), ['widgetOptions' => ['id' => Yii::$app->security->generateRandomString(8)]])->label(false) ?>
 
         <div style="color:#999;margin:1em 0">
             <?= Html::a(Yii::t('yii', 'If you forgot your password you can reset it'), ['request-password-reset']) ?>.

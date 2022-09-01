@@ -16,7 +16,7 @@ class SignupForm extends Model {
     public $password; 
     public $matricula; 
     public $cpf;
-    public $reCaptcha;
+    // public $reCaptcha;
 
     /**
      * @inheritdoc
@@ -40,7 +40,7 @@ class SignupForm extends Model {
             ['matricula', 'string', 'max' => 8],
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
-            [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::className(), 'uncheckedMessage' => 'Por favor, confirme que você não é um robô.'],
+            // [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::className(), 'uncheckedMessage' => 'Por favor, confirme que você não é um robô.'],
         ];
     }
 
