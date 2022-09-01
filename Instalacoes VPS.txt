@@ -1,0 +1,22 @@
+Instalar ReportServer(Apache Tomcat): Java, Postgres e Tomcat
+https://www.howtoforge.com/tutorial/how-to-install-reportserver-on-centos-7/
+
+Instalar jasperstarter direto na hospedagem
+http://jasperstarter.cenote.de/
+https://github.com/PHPJasper/phpjasper :: Atenção para o mysql jdbc
+
+Bash
+	Bibliotecas necessárias ao jasperreports
+		yum install zlib*
+		yum install libncurses*
+	Fontes microsoft para jasperreports	http://mscorefonts2.sourceforge.net/
+		yum install curl cabextract xorg-x11-font-utils fontconfig
+		rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+
+Firewall
+	Editar tabela: nano /etc/sysconfig/iptables
+	Após editar: systemctl restart  iptables.service
+	
+	Apache
+		-A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT|DROP(Bloqueia)
+		-A INPUT -p udp -m udp --dport 8080 -j ACCEPT|DROP(Bloqueia)

@@ -1,0 +1,1298 @@
+[19-Mar-2021 03:26:20 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [2002] Connection timed out in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=ns1....', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection timed out in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection timed out
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "wp-login.php". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('wp-login.php', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT_ENCODING' => 'gzip',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php73/root/etc:/opt/cpanel/ea-php73/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://mgfolha.com.br/wp-login.php',
+    'REDIRECT_SCRIPT_URL' => '/wp-login.php',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YFQZoDW4b1ICs7avru7fPwAAAEA',
+    'REDIRECT_URL' => '/wp-login.php',
+    'REMOTE_ADDR' => '167.99.13.90',
+    'REMOTE_PORT' => '47408',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/wp-login.php',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://mgfolha.com.br/wp-login.php',
+    'SCRIPT_URL' => '/wp-login.php',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YFQZoDW4b1ICs7avru7fPwAAAEA',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1616124320.357038021087646484375,
+    'REQUEST_TIME' => 1616124320,
+    'argv' => [],
+    'argc' => 0,
+]
+[20-Apr-2021 06:23:58 UTC] An Error occurred while handling another error:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo failed: Name or service not known
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "/.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/.git/objects/a...', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_HOST' => 'www.mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'curl/7.61.1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php74/root/etc:/opt/cpanel/ea-php74/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc',
+    'REDIRECT_SCRIPT_URL' => '/.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YH5zftdQZXr2thomDflfMgAAAFQ',
+    'REDIRECT_URL' => '/.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc',
+    'REMOTE_ADDR' => '15.207.19.9',
+    'REMOTE_PORT' => '41952',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '//.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc',
+    'SCRIPT_URL' => '/.git/objects/a0/11af217931198ae23ebcf829579e150c4803dc',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'www.mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YH5zftdQZXr2thomDflfMgAAAFQ',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1618899838.905992031097412109375,
+    'REQUEST_TIME' => 1618899838,
+    'argv' => [],
+    'argc' => 0,
+]
+[20-Apr-2021 06:23:59 UTC] An Error occurred while handling another error:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo failed: Name or service not known
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "/.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/.git/objects/9...', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_HOST' => 'www.mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'curl/7.61.1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php74/root/etc:/opt/cpanel/ea-php74/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580',
+    'REDIRECT_SCRIPT_URL' => '/.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YH5zfoYcBtFWLRzRz83r8QAAAIs',
+    'REDIRECT_URL' => '/.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580',
+    'REMOTE_ADDR' => '15.223.70.200',
+    'REMOTE_PORT' => '56942',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '//.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580',
+    'SCRIPT_URL' => '/.git/objects/92/f82004187cafa3d0d2dda05ef7ae35d74d4580',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'www.mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YH5zfoYcBtFWLRzRz83r8QAAAIs',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1618899838.9798119068145751953125,
+    'REQUEST_TIME' => 1618899838,
+    'argv' => [],
+    'argc' => 0,
+]
+[15-May-2021 08:32:19 UTC] An Error occurred while handling another error:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo failed: Name or service not known
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "/.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/.git/objects/1...', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_HOST' => 'www.mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'curl/7.61.1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php73/root/etc:/opt/cpanel/ea-php73/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c',
+    'REDIRECT_SCRIPT_URL' => '/.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YJ@HE-qEev0mdk9@bJyloAAAAE8',
+    'REDIRECT_URL' => '/.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c',
+    'REMOTE_ADDR' => '18.139.115.144',
+    'REMOTE_PORT' => '58806',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '//.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c',
+    'SCRIPT_URL' => '/.git/objects/16/bc71d9046b72f655607359b4cf618f9595176c',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'www.mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YJ@HE-qEev0mdk9@bJyloAAAAE8',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1621067539.39595508575439453125,
+    'REQUEST_TIME' => 1621067539,
+    'argv' => [],
+    'argc' => 0,
+]
+[16-May-2021 00:35:05 UTC] An Error occurred while handling another error:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo failed: Name or service not known
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "/.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/.git/objects/b...', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_HOST' => 'www.mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'curl/7.61.1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php73/root/etc:/opt/cpanel/ea-php73/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2',
+    'REDIRECT_SCRIPT_URL' => '/.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YKBoufqEev0mdk9@bJyrngAAAFE',
+    'REDIRECT_URL' => '/.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2',
+    'REMOTE_ADDR' => '13.212.246.100',
+    'REMOTE_PORT' => '39998',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '//.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2',
+    'SCRIPT_URL' => '/.git/objects/bf/23089ee5f9a9322de45ea29dbf63feb833ccf2',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'www.mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YKBoufqEev0mdk9@bJyrngAAAFE',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1621125305.7267940044403076171875,
+    'REQUEST_TIME' => 1621125305,
+    'argv' => [],
+    'argc' => 0,
+]
+[16-May-2021 12:39:02 UTC] An Error occurred while handling another error:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo failed: Name or service not known
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "/.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/.git/objects/d...', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_HOST' => 'www.mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'curl/7.61.1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php73/root/etc:/opt/cpanel/ea-php73/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6',
+    'REDIRECT_SCRIPT_URL' => '/.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YKESZgEe80QfvBf9MPytfQAAAQw',
+    'REDIRECT_URL' => '/.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6',
+    'REMOTE_ADDR' => '3.250.139.246',
+    'REMOTE_PORT' => '38062',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '//.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6',
+    'SCRIPT_URL' => '/.git/objects/d9/84c4166f26f72ef7f45d8ce9f7df7b9f6063b6',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'www.mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YKESZgEe80QfvBf9MPytfQAAAQw',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1621168742.640841007232666015625,
+    'REQUEST_TIME' => 1621168742,
+    'argv' => [],
+    'argc' => 0,
+]
+[16-May-2021 12:39:04 UTC] An Error occurred while handling another error:
+PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=mgfo...', 'mgfolha_folha', 'E@0[t$X$_}K)Px[...', NULL)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1030): yii\db\Connection->open()
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/Query.php(285): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home/mgfolha/public_html/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home/mgfolha/public_html/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(348): require('/home/mgfolha/p...')
+#15 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/mgfolha/p...', Array)
+#16 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/mgfolha/p...', Array, Object(frontend\controllers\SiteController))
+#17 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => php_network_getaddresses: getaddrinfo failed: Name or service not known
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "/.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be". in /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/.git/objects/7...', Array)
+#1 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home/mgfolha/public_html/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/mgfolha/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/mgfolha/public_html/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home/mgfolha/public_html',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_HOST' => 'www.mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'curl/7.61.1',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php73/root/etc:/opt/cpanel/ea-php73/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be',
+    'REDIRECT_SCRIPT_URL' => '/.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YKESaPqEev0mdk9@bJyvcAAAAEU',
+    'REDIRECT_URL' => '/.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be',
+    'REMOTE_ADDR' => '3.210.198.149',
+    'REMOTE_PORT' => '60608',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '//.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be',
+    'SCRIPT_FILENAME' => '/home/mgfolha/public_html/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://www.mgfolha.com.br/.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be',
+    'SCRIPT_URL' => '/.git/objects/7a/f9f78c996e15a68ec0fc57c198cbed4079a3be',
+    'SERVER_ADDR' => '162.214.145.146',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.com.br',
+    'SERVER_NAME' => 'www.mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'TZ' => 'Brazil/East',
+    'UNIQUE_ID' => 'YKESaPqEev0mdk9@bJyvcAAAAEU',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1621168744.6758000850677490234375,
+    'REQUEST_TIME' => 1621168744,
+    'argv' => [],
+    'argc' => 0,
+]
+[12-Sep-2021 20:22:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[12-Sep-2021 20:22:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[12-Sep-2021 20:22:46 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:46 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:11:47 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:13:41 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:15:36 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:15:36 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:15:36 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:24 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:54 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:54 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:37:54 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:40:33 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[13-Sep-2021 19:46:06 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 00:22:07 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 00:22:07 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 00:22:07 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 00:49:12 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 00:49:12 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 00:49:12 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 02:22:28 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 02:22:28 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 02:22:28 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 02:22:29 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 02:22:29 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 02:22:29 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 06:12:14 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 06:12:14 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 06:12:14 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 06:57:14 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 06:57:14 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 06:57:14 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:21:11 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:21:11 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:21:11 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:22:13 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:22:13 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:22:13 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:22:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:22:41 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:22:41 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:23:34 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:23:34 America/Fortaleza] PHP Warning:  require(/home1/tommen22/mgfolha.com.br/vendor/autoload.php): failed to open stream: No such file or directory in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 07:23:34 America/Fortaleza] PHP Fatal error:  require(): Failed opening required '/home1/tommen22/mgfolha.com.br/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/tommen22/mgfolha.com.br/index.php on line 11
+[14-Sep-2021 08:39:34 America/Fortaleza] An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'mgfolha_lynkos'@'50.116.86.73' (using password: YES) in /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php:723
+Stack trace:
+#0 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(723): PDO->__construct('mysql:host=mgfo...', 'mgfolha_lynkos', 'kjW4O[HEBA_C', NULL)
+#1 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(880): yii\db\Schema->getQueryBuilder()
+#12 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Query.php(287): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 /home1/tommen22/mgfolha.com.br/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#16 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/View.php(348): require('/home1/tommen22...')
+#17 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/tommen22...', Array)
+#18 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home1/tommen22...', Array, Object(frontend\controllers\SiteController))
+#19 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#20 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#21 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#22 [internal function]: yii\web\ErrorAction->run()
+#23 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#24 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#25 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#26 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#27 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#28 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#29 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'mgfolha_lynkos'@'50.116.86.73' (using password: YES) in /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php:649
+Stack trace:
+#0 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/mysql/Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Connection.php(880): yii\db\Schema->getQueryBuilder()
+#10 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/Query.php(287): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/db/ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 /home1/tommen22/mgfolha.com.br/frontend/views/layouts/main.php(149): yii\db\ActiveQuery->one()
+#14 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/View.php(348): require('/home1/tommen22...')
+#15 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home1/tommen22...', Array)
+#16 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home1/tommen22...', Array, Object(frontend\controllers\SiteController))
+#17 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#18 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#19 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#20 [internal function]: yii\web\ErrorAction->run()
+#21 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#22 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#23 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#24 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#25 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#26 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'mgfolha_lynkos'@'50.116.86.73' (using password: YES)
+)
+
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "desk-updt/MGet.zip". in /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('desk-updt/MGet....', Array)
+#1 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home1/tommen22/mgfolha.com.br/index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home1/tommen22/mgfolha.com.br/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home1/tommen22/mgfolha.com.br/index.php(23): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'CONTEXT_DOCUMENT_ROOT' => '/home1/tommen22/mgfolha.com.br',
+    'CONTEXT_PREFIX' => '',
+    'DOCUMENT_ROOT' => '/home1/tommen22/mgfolha.com.br',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'HTTP_ACCEPT' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'mgfolha.com.br',
+    'HTTP_USER_AGENT' => 'Java/1.8.0_271',
+    'PATH' => '/bin:/usr/bin',
+    'PHP_INI_SCAN_DIR' => '/opt/cpanel/ea-php73/root/etc:/opt/cpanel/ea-php73/root/etc/php.d:.',
+    'QUERY_STRING' => '',
+    'REDIRECT_SCRIPT_URI' => 'http://mgfolha.com.br/desk-updt/MGet.zip',
+    'REDIRECT_SCRIPT_URL' => '/desk-updt/MGet.zip',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'YUCJ9UOyTPvHVBhIGHc07gAAAC8',
+    'REDIRECT_URL' => '/desk-updt/MGet.zip',
+    'REMOTE_ADDR' => '168.181.112.61',
+    'REMOTE_PORT' => '34010',
+    'REQUEST_METHOD' => 'GET',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/desk-updt/MGet.zip',
+    'SCRIPT_FILENAME' => '/home1/tommen22/mgfolha.com.br/index.php',
+    'SCRIPT_NAME' => '/index.php',
+    'SCRIPT_URI' => 'http://mgfolha.com.br/desk-updt/MGet.zip',
+    'SCRIPT_URL' => '/desk-updt/MGet.zip',
+    'SERVER_ADDR' => '50.116.86.73',
+    'SERVER_ADMIN' => 'webmaster@mgfolha.tommendes.com.br',
+    'SERVER_NAME' => 'mgfolha.com.br',
+    'SERVER_PORT' => '80',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'UNIQUE_ID' => 'YUCJ9UOyTPvHVBhIGHc07gAAAC8',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1631619573.967094898223876953125,
+    'REQUEST_TIME' => 1631619573,
+    'argv' => [],
+    'argc' => 0,
+]

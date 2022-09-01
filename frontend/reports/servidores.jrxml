@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Servidores" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="2a36ae75-913f-4ae4-ab3c-e5ca31462608">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <parameter name="titulo" class="java.lang.String"/>
+    <queryString language="SQL">
+		<![CDATA[Select  matricula , nome, cpf from mgfolha_folha.cad_servidores]]>
+    </queryString>
+    <field name="matricula" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="matricula"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="cad_servidores"/>
+    </field>
+    <field name="nome" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="nome"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="cad_servidores"/>
+    </field>
+    <field name="cpf" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="cpf"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="cad_servidores"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <textField>
+                <reportElement x="400" y="10" width="80" height="30" uuid="a6a8435a-8b4c-412d-8a7d-ac7b65afe93d"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement x="480" y="10" width="80" height="30" uuid="f806b223-6fb8-4d7f-bffa-78c84aad0881">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="48" y="12" width="312" height="18" uuid="10fc24b2-453f-457f-a838-2ba15527a245"/>
+                <textFieldExpression><![CDATA[$P{titulo}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="61" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="25" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <textField>
+                <reportElement x="0" y="10" width="100" height="15" uuid="44f4acf3-33ad-4175-a3f9-e90e9726066b">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="10" width="280" height="15" uuid="b0a36fe0-ad9a-4c6a-8447-0fce1bcdc827">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="450" y="10" width="100" height="15" uuid="2de9f7a2-1234-4a11-9778-1431b9dd1d5a">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

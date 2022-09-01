@@ -1,0 +1,30 @@
+﻿1. Folhas novas são geradas apenas após a confirmação do usuário de que a folha atual já está pronta
+	Para confirmar digite na caixa de confirmação: "CONFIRMO" com letras maiúsculas
+2. Não é possível alterar folhas fechadas
+3. Dados funcionais serão importados do movimento imediatamente anterior ao atual existente na tabela de parâmetros
+4. Por segurança, todas as folhas importadas do MGFolha(desktop) serão consideradas fechadas
+4. Parâmetros novos (aaaa/mm), parcela 000 e parâmetro de 13º do ano serão criados dinâmicamente na primeira abertura do sistema no mês e pelo primeiro usuário que acessar o sistema
+5. Parâmetros de 13º do ano com a parcela de acordo com o mês, com três digitos (001...012), serão criados dinâmicamente na primeira abertura do sistema no ano e pelo primeiro usuário que acessar o sistema
+6. Clientes novos e seus domínios e serviços precisam ser registrados em @common/components/Clientes seguindo o modelo abaixo
+        'nome_do_cliente' => [
+            'servicos' => ['pagamentos', 'cash'],
+            'dominios' => ['ativos', 'inativos', 'camara'],
+        ],
+7. Bancos de dados novos precisam ser registrados em @common/config/main-local seguindo o modelo abaixo
+        'nome_do_cliente' => [
+            'class' => 'common\components\ConnectionExtra',
+            'dsn' => 'mysql:host=localhost;dbname=mgfolha_(nome_do_cliente)',
+            'dbname' => 'mgfolha_(nome_do_cliente)',
+        ],
+
+Tabelas populadas mensalmente
+cad_sfuncional(esta tabela não era populada mensalmente)
+	Replicar dados do período anterior com a parcela 000
+fin_parametros(antiga tabela "parametros")
+	Registro criado dinâmicamente na primeira abertura do sistema no mês e pelo primeiro usuário que acessar o sistema
+fin_sfuncional(antiga tabela "financeiro")
+	Replicar dados do período anterior com a parcela 000
+fin_rubricas(antiga tabela "mensal")
+	Registrar eventos automaticos
+
+Bloquear via app as funções de update(view/update) e delete nas tabelas para folhas fechadas

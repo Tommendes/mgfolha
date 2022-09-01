@@ -1,0 +1,10 @@
+Rever funcionalidades!
+	Recadastro: O que esperar? Criar recadastro toda vez que imprimir? Criar e guardar ficha para reimprimir ocupa espaço(é importante?)
+	Criar a ficha cadastral completa e implantar no recadastro
+	Classes e PCCS: Criação de uma classe ou PCC para um servidor?
+	PCCS opcional
+Resoluções!
+	D Admissão e D Benefício não deveria ser uma informação reservada ao sistema?
+	Remover: Previdência
+	D Tempo = calculo tempo de serviço anuênio... pertence ao PCCS
+	D Tempofim = calculo tempo final de serviço anuênio... pertence ao PCCS

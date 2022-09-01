@@ -1,0 +1,83 @@
+/* 
+    Version    : v.1
+    Created on : 27/11/2018, 10:51:49
+    Author     : contato@tommendes.com.br
+*/
+
+.modal-lg {
+    max-width: 95% !important;
+}
+.modal-md {
+    max-width: 75% !important;
+}
+.modal-sm {
+    max-width: 45% !important;
+}
+.navbar .dropdown form {
+    display: none;
+}
+.navbar .dropdown.open form {
+    display: block;
+}
+/*Modal effects*/
+.fade2 {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all .2s linear;
+    display: block !important;
+}
+.fade2.show {
+    opacity: 1;
+    transform: scale(1);
+}
+.kv-grouped-row { 
+    background-color: #FFF0F5 !important;
+    font-size: 1.0em;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.breadcrumb > li + li:before {
+    color: #ccc;
+    content: "/ ";
+    padding: 0 5px;
+}
+.btn-warning {
+    background-color: rgba(243, 156, 18, 0.88);
+    border-color: rgba(243, 156, 18, 0.88);
+    color: #fff; 
+}
+.gv-warning{
+    background-color: rgba(243, 156, 18, 0.88);
+    border-color: rgba(243, 156, 18, 0.88);
+    color: #fff;
+}
+/*.tooltip-inner {
+    max-width: 500px;
+     If max-width does not work, try using width instead 
+    width: 500px; 
+}*/
+.lb-sm {
+    font-size: 12px;
+}
+
+.lb-md {
+    font-size: 16px;
+}
+
+.lb-lg {
+    font-size: 20px;
+}
+
+.bd-example {
+    padding: 10px;
+    border-width: 1px;
+    border: solid #F8F9B9;
+}
+
+.lbl-impressoes {
+    font-size: 12px;
+}
+
+.checkmark {
+    margin-top: 0.4rem;
+}

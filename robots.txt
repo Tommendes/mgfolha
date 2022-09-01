@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /frontend
+Allow: /pagamentos
+Allow: /cash
+Disalow: /.padroes

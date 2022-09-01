@@ -1,0 +1,58 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">O que &eacute; um Certificado SSL?</a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">Certificados SSL s&atilde;o Certificados Digitais para identificar sites. Ao identificar, garantem autenticidade, privacidade e integridade na transmiss&atilde;o dos dados, proporcionando aos visitantes a garantia de que est&atilde;o realmente acessando um site &quot;original&quot; e n&atilde;o a uma c&oacute;pia operada por fraudadores. Isto &eacute; poss&iacute;vel gra&ccedil;as ao protocolo de seguran&ccedil;a SSL (Secure Sockets Layer), tecnologia que codifica os dados em tr&aacute;fego entre o computador do usu&aacute;rio e o servidor respons&aacute;vel pelo site.</p>
+
+<p>Os Certificados SSL s&atilde;o esperados pelos internautas em sites que solicitam dados confidenciais, como informa&ccedil;&otilde;es de identidade e n&uacute;mero de cart&atilde;o de cr&eacute;dito.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Como funciona o Certificado SSL?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">O Certificado SSL &eacute; um arquivo instalado no servidor web onde no site est&aacute; hospedado. &Eacute; composto por dois segmentos:<br />
+<br />
+- Chave P&uacute;blica, que codifica os dados;<br />
+- Chave Privada, que decodifica os dados.<br />
+<br />
+Quando o internauta acessa um site, o navegador se conecta ao servidor protegido pelo Certificado SSL e uma se&ccedil;&atilde;o &uacute;nica &eacute; criada com estas duas chaves. Desta forma, todos os dados durante esta se&ccedil;&atilde;o estar&atilde;o protegidos e n&atilde;o poder&atilde;o ser decifrados por qualquer outra parte, al&eacute;m do internauta e o servidor.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Por que o Certificado SSL &eacute; necess&aacute;rio?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">O LynkOs envia e recebe informa&ccedil;&otilde;es pessoais, e por isso &eacute; necess&aacute;rio proteger a plataforma. Hoje, os internautas j&aacute; t&ecirc;m o h&aacute;bito de conferir se o site &eacute; seguro antes de seguir com a navega&ccedil;&atilde;o. Proteger o LynkOs &eacute; imprescind&iacute;vel.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingQuatro">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseQuatro" aria-expanded="false" aria-controls="collapseQuatro">
+		Os Certificados funcionam em todos os Navegadores?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseQuatro" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuatro">
+      <div class="panel-body">
+	  Os Certificados SSL são compatíveis com 99,9% dos navegadores atuais.
+      </div>
+    </div>
+  </div>
+</div>
