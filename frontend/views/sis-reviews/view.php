@@ -99,7 +99,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'pluginOptions' => [
                         'initval' => 1,
                         'min' => 1,
-                        'max' => 99,
+                        'max' => 9999,
                         'verticalbuttons' => false,
                         'verticalup' => '<i class="fas fa-plus"></i>',
                         'verticaldown' => '<i class="fas fa-minus"></i>'
