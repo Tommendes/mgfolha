@@ -4,7 +4,7 @@ $components = [
     'components' => [
         'db' => [
             'class' => 'common\components\ConnectionExtra',
-            'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=tommen22_folha',
+            'dsn' => 'mysql:host=162.214.208.90;dbname=mgfolha_folha',
             'dbname' => 'mgfolha_folha',
         ],
         // Conexões adicionais de bancos de dados sendo um para cada cliente
@@ -16,13 +16,13 @@ $components = [
         // ],
         // 'igaci' => [
         //     'class' => 'common\components\ConnectionExtra',
-        //     'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=tommen22_folhaigaci',
+        //     'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=mgfolha_folhaigaci',
         //     'dbname' => 'tommen22_folhaigaci',
         // ],
         'cacimbinhas_antigo' => [
             'class' => 'common\components\ConnectionExtra',
-            'dsn' => 'mysql:host=br766.hostgator.com.br;dbname=tommen22_folhacacimbinhas',
-            'dbname' => 'tommen22_folhacacimbinhas',
+            'dsn' => 'mysql:host=162.214.208.90;dbname=mgfolha_folhacacimbinhas',
+            'dbname' => 'mgfolha_folhacacimbinhas',
         ],
         //        'ftp' => [ 
         //            'class' => 'yii\ftp\Connection',

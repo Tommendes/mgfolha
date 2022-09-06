@@ -13,10 +13,10 @@ use yii\db\Connection;
 class ConnectionExtra extends Connection {
 
     public $dbname;
-    public $host = 'br766.hostgator.com.br';
+    public $host = '162.214.208.90';
     public $port = '3306';
-    public $username = 'tommen22_mgfolha';
-    public $password = 'E1ta que quebraram minha senha enorme';
+    public $username = 'mgfolha_mgfolha';
+    public $password = '355@-s3nh@-é-diff';
     public $rpt_username = 'mgfolha_reports';
     public $rpt_password = 'fq6EnnX4AJ1W';
     public $charset = 'utf8';
