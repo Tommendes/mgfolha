@@ -13,9 +13,9 @@ use yii\db\Connection;
 class ConnectionExtra extends Connection {
 
     public $dbname;
-    public $host = 'br766.hostgator.com.br';
+    public $host = '162.214.208.90';
     public $port = '3306';
-    public $username = 'tommen22_mgfolha';
+    public $username = 'mgfolha_folha';
     public $password = 'E1ta que quebraram minha senha enorme';
     public $rpt_username = 'mgfolha_reports';
     public $rpt_password = 'fq6EnnX4AJ1W';
