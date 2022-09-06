@@ -3905,3 +3905,168 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1662038987.2479
     'REQUEST_TIME' => 1662038987
 ]
+2022-09-06 12:57:52 [::1][-][a1in537k137prpg64132ac0n38][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'mgfolha_folha'@'179.251.185.219' (using password: YES) in C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=br76...', 'mgfolha_folha', 'E1ta que quebra...', NULL)
+#1 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#10 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(880): yii\db\Schema->getQueryBuilder()
+#12 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#14 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#15 C:\Fontes\htdocs\mgfolha.com.br\common\models\User.php(385): yii\db\ActiveQuery->one()
+#16 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\User.php(700): common\models\User::findIdentity(1)
+#17 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#18 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#19 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#20 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#21 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#22 [internal function]: yii\base\BaseObject->__construct(Array)
+#23 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#24 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#25 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#26 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#27 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#28 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#29 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#30 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#31 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#32 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#33 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#34 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#35 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#36 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#37 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#38 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#39 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#40 C:\Fontes\htdocs\mgfolha.com.br\index.php(23): yii\base\Application->__construct('[<span class="s...')
+#41 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'mgfolha_folha'@'179.251.185.219' (using password: YES) in C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(common\components\ConnectionExtra))
+#8 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(880): yii\db\Schema->getQueryBuilder()
+#10 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Query.php(287): yii\db\ActiveQuery->createCommand(Object(common\components\ConnectionExtra))
+#12 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#13 C:\Fontes\htdocs\mgfolha.com.br\common\models\User.php(385): yii\db\ActiveQuery->one()
+#14 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\User.php(700): common\models\User::findIdentity(1)
+#15 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#16 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#17 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#18 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#19 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#20 [internal function]: yii\base\BaseObject->__construct(Array)
+#21 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#22 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#23 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#24 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#25 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#26 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#27 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#28 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#29 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#30 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#31 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#32 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#33 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#34 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#35 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#36 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#37 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#38 C:\Fontes\htdocs\mgfolha.com.br\index.php(23): yii\base\Application->__construct('[<span class="s...')
+#39 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'mgfolha_folha'@'179.251.185.219' (using password: YES)
+)
+
+2022-09-06 12:57:52 [::1][-][a1in537k137prpg64132ac0n38][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.329944656.1662049544'
+    'folha-frontend' => 'a1in537k137prpg64132ac0n38'
+    '_csrf-frontend' => 'c4811adef503d2d2f268fe9e82fcb75ca09e1af021c16f91beee9c687a03f71da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"zTBfhirHBw9YJIoYAW2p0r1w4JLH2n-X\";}'
+    '_csrf-pagamentos' => 'c2ffbb17276cb400df2f6fcff4b6b3a787fc44eef570290e160dc845fd94d145a:2:{i:0;s:16:\"_csrf-pagamentos\";i:1;s:32:\"LM9_w326TmlHK_p2xIR6lkixEOW2Xvyz\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'MeTSoIhG1W_jBK8Uyah2rifygkk_wxYL'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"105\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"105\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.27'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.1.329944656.1662049544; folha-frontend=a1in537k137prpg64132ac0n38; _csrf-frontend=c4811adef503d2d2f268fe9e82fcb75ca09e1af021c16f91beee9c687a03f71da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22zTBfhirHBw9YJIoYAW2p0r1w4JLH2n-X%22%3B%7D; _csrf-pagamentos=c2ffbb17276cb400df2f6fcff4b6b3a787fc44eef570290e160dc845fd94d145a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22_csrf-pagamentos%22%3Bi%3A1%3Bs%3A32%3A%22LM9_w326TmlHK_p2xIR6lkixEOW2Xvyz%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Embarcadero\\RAD Studio\\7.0\\bin;D:\\TomMe\\OneDrive\\Documentos\\RAD Studio\\7.0\\Bpl;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jre1.8.0_333\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PowerShell\\7\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/7.4.29 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/7.4.29'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Fontes/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Fontes/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/Fontes/htdocs/mgfolha.com.br/index.php'
+    'REMOTE_PORT' => '56802'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/mgfolha.com.br/'
+    'SCRIPT_NAME' => '/mgfolha.com.br/index.php'
+    'PHP_SELF' => '/mgfolha.com.br/index.php'
+    'REQUEST_TIME_FLOAT' => 1662461872.2157
+    'REQUEST_TIME' => 1662461872
+]
