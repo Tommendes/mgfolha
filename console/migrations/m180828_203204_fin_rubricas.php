@@ -30,7 +30,7 @@ class m180828_203204_fin_rubricas extends Migration
             $this->renameTable($this::TABELA_V3, $this::TABELA);
             // Primeira alteração na tabela fin_sfuncional
             $this->execute('ALTER TABLE ' . $this::TABELA
-                // . ' ADD COLUMN id INT(11) NOT NULL AUTO_INCREMENT COMMENT "ID do registro" FIRST, '
+                . ' ADD COLUMN id INT(11) NOT NULL AUTO_INCREMENT COMMENT "ID do registro" FIRST, '
                 . ' ADD COLUMN slug VARCHAR(255) NOT NULL AFTER id, '
                 . 'ADD COLUMN status TINYINT(3) DEFAULT 10 NOT NULL AFTER id, '
                 . 'ADD column dominio VARCHAR(255) NOT NULL COMMENT "Domínio do cliente" AFTER status, '
