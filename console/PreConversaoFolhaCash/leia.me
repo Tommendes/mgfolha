@@ -7,8 +7,12 @@
 #06 Fbd: Exportar os dados das tabelas Financeiro e Mensal como SQL
 #07 MySQL: Importar os dados das tabelas Financeiro e Mensal
     !!! prompt de comandos (não bash e nem power shell) '''
-        c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "C:\Users\TomMe\Desktop\Financeiro.sql"
-        c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "C:\Users\TomMe\Desktop\Mensal.sql"
+        Dell
+            c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "C:\Users\TomMe\Desktop\Financeiro.sql"
+            c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "C:\Users\TomMe\Desktop\Mensal.sql"
+        Lenovo
+            c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "D:\TomMe\OneDrive\Área de Trabalho\Financeiro.sql"
+            c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "D:\TomMe\OneDrive\Área de Trabalho\Mensal.sql"
 #08 Para evitar a perda dos dados em caso de erro no passo a seguir, copie o banco de dados mgfolha_import para outro banco vazio ou crie um DUMP(cópia)
 #09 Executar para limpar a base de valores inúteis: 
     DELETE FROM `mgfolha_import`.financeiro WHERE n_valor = 0;
