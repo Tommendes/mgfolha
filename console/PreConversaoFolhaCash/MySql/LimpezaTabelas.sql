@@ -30,6 +30,8 @@ TRUNCATE TABLE `mgfolha_import`.`local_params`;
 TRUNCATE TABLE `mgfolha_import`.`orgao`; 
 TRUNCATE TABLE `mgfolha_import`.`orgao_resp`; 
 TRUNCATE TABLE `mgfolha_import`.`orgao_ua`; 
+drop table `mgfolha_import`.`orgao_ua`; 
+drop table `mgfolha_import`.`orgao_ua`;
 /*
 drop table `mgfolha_import`.`cad_bancos`; 
 drop table `mgfolha_import`.`cad_bconvenios`; 
