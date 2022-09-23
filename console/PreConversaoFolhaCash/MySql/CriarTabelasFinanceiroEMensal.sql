@@ -1,7 +1,9 @@
+DROP TABLE IF EXISTS `mgfolha_import`.FINANCEIRO;
 CREATE TABLE `mgfolha_import`.FINANCEIRO (
     IDSERVIDOR              VARCHAR(8) NOT NULL,
     MES                     VARCHAR(2) NOT NULL,
     ANO                     VARCHAR(4) NOT NULL,
+    PARCELA                 VARCHAR(3) NOT NULL,
     IDEVENTO                VARCHAR(3) NOT NULL,
     AUTOMATICA              VARCHAR(1),
     TIPO                    VARCHAR(1),
@@ -22,7 +24,6 @@ CREATE TABLE `mgfolha_import`.FINANCEIRO (
     I_DEP_IR                INTEGER,
     I_DIAS                  INTEGER,
     N_VALORPATRONAL         NUMERIC(15,2),
-    PARCELA                 VARCHAR(3) NOT NULL,
     I_PRIORIDADE            INTEGER,
     I_ANOST                 NUMERIC(15,2),
     N_VALOR_MATERNIDADE     NUMERIC(15,2),
@@ -31,13 +32,17 @@ CREATE TABLE `mgfolha_import`.FINANCEIRO (
     ADDATAATO               DATE,
     ADVEICULOPUBLICACAOATO  VARCHAR(255),
     ADDATAINICIO            DATE,
-    CGC                     CHAR(1)
+    CGC                     CHAR(1),
+    STATUS_ESOCIAL          VARCHAR(255),
+    RECIBO_ESOCIAL          VARCHAR(25),
+    ID_EVENTO_ESOCIAL       VARCHAR(255)
 ) ENGINE=INNODB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-CREATE TABLE `mgfolha_import`.MENSAL (
+DROP TABLE IF EXISTS `mgfolha_import`.MENSAL;
+CREATE TABLE `mgfolha_import`. MENSAL (
     IDSERVIDOR              VARCHAR(8) NOT NULL,
     MES                     VARCHAR(2) NOT NULL,
     ANO                     VARCHAR(4) NOT NULL,
+    PARCELA                 VARCHAR(3) NOT NULL,
     SITUACAO                VARCHAR(20),
     D_SITUACAO              DATE,
     IDCARGO                 VARCHAR(4),
@@ -64,7 +69,6 @@ CREATE TABLE `mgfolha_import`.MENSAL (
     SITUACAOFUNCIONAL       VARCHAR(25),
     DESCONTA_SINDICATO      VARCHAR(3),
     GERADO                  VARCHAR(1),
-    PARCELA                 VARCHAR(3) NOT NULL,
     N_MATERNIDADE           NUMERIC(15,2),
     D_BENEFICIO             DATE,
     RETORNO_OCORRENCIA      VARCHAR(2),
@@ -91,5 +95,11 @@ CREATE TABLE `mgfolha_import`.MENSAL (
     FGNUMEROATO             VARCHAR(32),
     FGDATAATO               DATE,
     FGVEICULOPUBLICACAOATO  VARCHAR(255),
-    FGDATAINICIO            DATE
+    FGDATAINICIO            DATE,
+    PLAN_SEGREGACAO         VARCHAR(30),
+    TETO_RGPS               VARCHAR(10),
+    ABONO_PERM              VARCHAR(10),
+    STATUS_ESOCIAL          VARCHAR(255),
+    RECIBO_ESOCIAL          VARCHAR(25),
+    ID_EVENTO_ESOCIAL       VARCHAR(255)
 ) ENGINE=INNODB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
