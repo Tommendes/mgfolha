@@ -625,7 +625,7 @@ BEGIN
 	FROM cad_sfuncional
 	JOIN cad_servidores ON cad_sfuncional.id_cad_servidores = cad_servidores.id
 	JOIN fin_sfuncional ON cad_sfuncional.id_cad_servidores = fin_sfuncional.id_cad_servidores AND 
-	CAST(cad_sfuncional.ano as unsigned) <= CAST(fin_sfuncional.ano parcela as unsigned) and CAST(cad_sfuncional.mes as unsigned) <= CAST(fin_sfuncional.mes as unsigned) AND
+	CAST(cad_sfuncional.parcela as unsigned CAST(fin_sfuncional.ano parcela as unsignedST(cad_sfuncional.mes as unsigned) <= CAST(fin_sfuncional.mes as unsigned) AND
 	CAST(cad_sfuncional.parcela as unsigned) <= CAST(fin_sfuncional.parcela as unsigned)
 	WHERE fin_sfuncional.ano = v_ano AND fin_sfuncional.mes = v_mes AND fin_sfuncional.parcela = v_parcela 
 	AND fin_sfuncional.id_cad_servidores = v_id_cad_servidor
@@ -1304,7 +1304,7 @@ BEGIN
 		FROM cad_sfuncional
 		JOIN cad_servidores ON cad_sfuncional.id_cad_servidores = cad_servidores.id
 		JOIN fin_sfuncional ON cad_sfuncional.id_cad_servidores = fin_sfuncional.id_cad_servidores AND 
-		CAST(cad_sfuncional.parcela as unsigned) <= CAST(fin_sfuncional.ano parcela as unsigned) and CAST(cad_sfuncional.mes as unsigned) <= CAST(fin_sfuncional.mes as unsigned) AND
+		CAST(cad_sfuncional.parcela as unsigned CAST(fin_sfuncional.ano parcela as unsignedST(cad_sfuncional.mes as unsigned) <= CAST(fin_sfuncional.mes as unsigned) AND
 		CAST(cad_sfuncional.parcela as unsigned) <= CAST(fin_sfuncional.parcela as unsigned)
 		
 		WHERE fin_sfuncional.ano = v_ano AND fin_sfuncional.mes = v_mes AND fin_sfuncional.parcela = v_parcela 
