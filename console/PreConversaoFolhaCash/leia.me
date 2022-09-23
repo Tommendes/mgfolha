@@ -7,12 +7,14 @@
 #06 Fbd: Exportar os dados das tabelas Financeiro e Mensal como SQL
 #07 MySQL: Importar os dados das tabelas Financeiro e Mensal
     !!! prompt de comandos (não bash e nem power shell) '''
-        c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "[Caminho para o arquivo]\Financeiro.sql"
-        c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "[Caminho para o arquivo]\Mensal.sql"
+        c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "C:\Users\TomMe\Desktop\Financeiro.sql"
+        c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "C:\Users\TomMe\Desktop\Mensal.sql"
 #08 Para evitar a perda dos dados em caso de erro no passo a seguir, copie o banco de dados mgfolha_import para outro banco vazio ou crie um DUMP(cópia)
-#09 php yii migrate para popular o banco com as tabelas restantes e converter os dados importados
+#09 Executar para limpar a base de valores inúteis: 
+    DELETE FROM `mgfolha_import`.financeiro WHERE n_valor = 0;
+#10 php yii migrate para popular o banco com as tabelas restantes e converter os dados importados
 
 Se tudo ocorrer até o fim sem erros, a importação terá sido executada
-#10 Criar banco de dados no VPS
+#11 Criar banco de dados no VPS
     create database `wwmgca_[cliente]_[dominio]` character set utf8mb4 collate utf8mb4_general_ci
-#11 Importar os dados para o novo banco de dados
+#12 Importar os dados para o novo banco de dados
