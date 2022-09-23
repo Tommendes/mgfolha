@@ -43,7 +43,7 @@ class m201210_123627_fin_sfuncional_alter_table extends Migration
                 . 'ADD COLUMN d_tempofim VARCHAR(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL, '
                 . 'ADD COLUMN n_valorbaseinss DECIMAL(15,2) DEFAULT NULL COMMENT "Valor base INSS"');
             echo "*** Importação dos dados em cad_sfuncional para " . $this::TABELA_SFUNCIONAL . " ***";
-            // $this->execute("UPDATE " . $this::TABELA_SFUNCIONAL . " ff SET id_local_trabalho = (SELECT cs.id_local_trabalho FROM cad_sfuncional cs WHERE cs.id_cad_servidores = ff.id_cad_servidores GROUP BY cs.id_cad_servidores)");
+            $this->execute("UPDATE " . $this::TABELA_SFUNCIONAL . " ff SET id_local_trabalho = (SELECT cs.id_local_trabalho FROM cad_sfuncional cs WHERE cs.id_cad_servidores = ff.id_cad_servidores GROUP BY cs.id_cad_servidores)");
             $this->execute("UPDATE " . $this::TABELA_SFUNCIONAL . " ff SET id_cad_principal = (SELECT cs.id_cad_principal FROM cad_sfuncional cs WHERE cs.id_cad_servidores = ff.id_cad_servidores GROUP BY cs.id_cad_servidores)");
             $this->execute("UPDATE " . $this::TABELA_SFUNCIONAL . " ff SET id_escolaridade = (SELECT cs.id_escolaridade FROM cad_sfuncional cs WHERE cs.id_cad_servidores = ff.id_cad_servidores GROUP BY cs.id_cad_servidores)");
             $this->execute("UPDATE " . $this::TABELA_SFUNCIONAL . " ff SET escolaridaderais = (SELECT cs.escolaridaderais FROM cad_sfuncional cs WHERE cs.id_cad_servidores = ff.id_cad_servidores GROUP BY cs.id_cad_servidores)");
