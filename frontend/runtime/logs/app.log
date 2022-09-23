@@ -4130,8 +4130,13 @@ Stack trace:
 #23 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('', Array)
 #24 C:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
 #25 C:\Fontes\htdocs\mgfolha.com.br\index.php(23): yii\base\Application->run()
+<<<<<<< HEAD
 #26 {main}
 Additional Information:
+=======
+#26 {main}
+Additional Information:
+>>>>>>> 6ab62a8cc4a64dc5ed3ae0bcb2d08d2e168a71b4
 Array
 (
     [0] => HY000
@@ -4196,6 +4201,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1662727333.3373
     'REQUEST_TIME' => 1662727333
 ]
+<<<<<<< HEAD
 2022-09-23 14:57:51 [::1][-][7o7hg2hbblk3o8u7mk28j81uuu][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'mgfolha_mgfolha'@'191.135.199.0' (using password: YES) in D:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php:723
 Stack trace:
 #0 D:\Fontes\htdocs\mgfolha.com.br\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=162....', 'mgfolha_mgfolha', '355@-s3nh@-\xC3\xA9-d...', NULL)
@@ -4328,3 +4334,5 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1663937870.4609
     'REQUEST_TIME' => 1663937870
 ]
+=======
+>>>>>>> 6ab62a8cc4a64dc5ed3ae0bcb2d08d2e168a71b4

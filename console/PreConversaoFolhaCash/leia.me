@@ -1,0 +1,8 @@
+#01 Em MGFP01.fdb executar PreConversaoFB.sql
+#02 Limpar todo o banco de dados mgfolha_import
+#03 php yii migrate para popular o banco com todas as tabelas
+#04 Executar ConversorMFolhaCash(java)
+    A) - Só prosseguir após o ConversorMFolhaCash não apresentar mais nenhum erro de importação
+#05 Executar console\PreConversaoFolhaCash\MySql\CriarTabelasFinanceiroEMensal.sql
+#06 Para evitar a perda dos dados em caso de erro no passo a seguir, copie o banco de dados mgfolha_import para outro banco vazio ou crie um DUMP(cópia)
+#07 php yii migrate para popular o banco com as tabelas restantes e converter os dados importados
