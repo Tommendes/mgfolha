@@ -27,7 +27,7 @@ class m201210_123628_alter_tables extends Migration
         $this->execute('ALTER TABLE cad_sdependentes DROP COLUMN slug, DROP INDEX slug');
         $this->execute('ALTER TABLE cad_servidores DROP COLUMN slug, DROP INDEX slug');
         $this->execute('ALTER TABLE cad_sferias DROP COLUMN slug, DROP INDEX slug');
-        $this->execute('ALTER TABLE cad_sfuncional DROP COLUMN slug, DROP INDEX slug');
+        // $this->execute('ALTER TABLE cad_sfuncional DROP COLUMN slug, DROP INDEX slug');
         $this->execute('ALTER TABLE cad_smovimentacao DROP COLUMN slug, DROP INDEX slug');
         $this->execute('ALTER TABLE cad_srecadastro DROP COLUMN slug, DROP INDEX slug');
         $this->execute('ALTER TABLE fin_basefixa DROP COLUMN slug, DROP INDEX slug');
