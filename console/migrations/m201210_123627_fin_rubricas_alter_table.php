@@ -18,7 +18,7 @@ class m201210_123627_fin_rubricas_alter_table extends Migration
     {
         if ($this->getTableExist($this::TABELA_RUBRICAS)) {
             echo "*** Alterações em " . $this::TABELA_RUBRICAS . " ***";
-            // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' CHANGE parcela complementar VARCHAR(3) CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT "parcela"');
+            // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' CHANGE parcela complementar VARCHAR(3) CHARSET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT "parcela"');
         } else {
             echo "\n";
             echo $this::TABELA_RUBRICAS . " ainda não foi criada\n";
