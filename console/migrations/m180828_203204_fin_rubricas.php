@@ -29,7 +29,7 @@ class m180828_203204_fin_rubricas extends Migration
             $this->dropTable($this::TABELA);
             $this->renameTable($this::TABELA_V3, $this::TABELA);
             // Primeira alteração na tabela fin_sfuncional
-            $this->execute('ALTER TABLE ' . $this::TABELA . 'ADD COLUMN `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`)');
+            $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD COLUMN `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`)');
             $this->execute('ALTER TABLE ' . $this::TABELA
                 . ' ADD COLUMN slug VARCHAR(255) NOT NULL AFTER id, '
                 . 'ADD COLUMN status TINYINT(3) DEFAULT 10 NOT NULL AFTER id, '
