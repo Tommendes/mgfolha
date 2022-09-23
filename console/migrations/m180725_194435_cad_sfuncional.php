@@ -50,7 +50,7 @@ class m180725_194435_cad_sfuncional extends Migration {
             'molestia' => $this->string(2)->comment('Moléstia'),
             'd_laudomolestia' => $this->string(10)->comment('Moléstia data'),
             'manad_tiponomeacao' => $this->string(20)->comment('Tipo nomeação'),
-            'manad_numeronomeacao' => $this->string(20)->comment('Número nomeação'),
+            'manad_numeronomeacao' => $this->string(255)->comment('Número nomeação'),
             'd_admissao' => $this->string(10)->comment('Admissão data'),
             'd_tempo' => $this->string(10)->comment(''),
             'd_tempofim' => $this->string(10)->comment(''),
