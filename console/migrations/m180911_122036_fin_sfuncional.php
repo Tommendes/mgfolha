@@ -53,8 +53,7 @@ class m180911_122036_fin_sfuncional extends Migration
                 . 'CHANGE n_adnoturno n_adnoturno INT(3) NULL, '
                 . 'CHANGE n_hextra n_hextra INT(3) NULL, '
                 . 'CHANGE desconta_sindicato desconta_sindicato VARCHAR(3) NULL AFTER desconta_rpps, '
-                . 'ADD COLUMN enio TINYINT(1) NULL COMMENT "Anuênio, Triênio, Quinquênio ou Decênio" AFTER desconta_sindicato, '
-                . 'ADD PRIMARY KEY (id)');
+                . 'ADD COLUMN enio TINYINT(1) NULL COMMENT "Anuênio, Triênio, Quinquênio ou Decênio" AFTER desconta_sindicato');
         } else {
             echo '*** Tabela "' . $this::TABELA_V3 . '" não existe ***';
             exit;
