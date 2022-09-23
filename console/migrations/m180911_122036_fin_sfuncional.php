@@ -29,8 +29,8 @@ class m180911_122036_fin_sfuncional extends Migration
             // Renomeia a tabela v3 -> v4
             $this->renameTable($this::TABELA_V3, $this::TABELA);
             // Primeira alteração na tabela fin_sfuncional
+            $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD COLUMN `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`)');
             $this->execute('ALTER TABLE ' . $this::TABELA
-                . ' ADD COLUMN id INT(11) NOT NULL AUTO_INCREMENT FIRST, '
                 . 'ADD COLUMN slug VARCHAR(255) NOT NULL AFTER id, '
                 . 'ADD COLUMN status TINYINT(3) DEFAULT 10 NOT NULL AFTER slug, '
                 . 'add column dominio VARCHAR(255) NOT NULL COMMENT "Domínio do cliente" AFTER status, '
