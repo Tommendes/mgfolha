@@ -31,7 +31,7 @@ class m180911_122036_fin_sfuncional extends Migration
             // Primeira alteração na tabela fin_sfuncional
             $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD COLUMN `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`)');
             $this->execute('ALTER TABLE ' . $this::TABELA
-                . 'ADD COLUMN slug VARCHAR(255) NOT NULL AFTER id, '
+                . ' ADD COLUMN slug VARCHAR(255) NOT NULL AFTER id, '
                 . 'ADD COLUMN status TINYINT(3) DEFAULT 10 NOT NULL AFTER slug, '
                 . 'add column dominio VARCHAR(255) NOT NULL COMMENT "Domínio do cliente" AFTER status, '
                 . 'ADD COLUMN evento INT(11) DEFAULT 0 NOT NULL AFTER dominio, '
