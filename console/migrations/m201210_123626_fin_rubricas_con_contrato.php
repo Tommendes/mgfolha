@@ -17,18 +17,19 @@ class m201210_123626_fin_rubricas_con_contrato extends Migration
      */
     public function safeUp()
     {
-        if ($this->getTableExist($this::TABELA_CONTRATOS)) {
-            echo "*** Criar chave extrangeira fk-fin_rubricas-id_con_contratos-con_contratos-id ***";
-            // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' DROP FOREIGN KEY IF EXISTS `fk-fin_rubricas-id_fin_eventos-fin_eventos-id`');
-            // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' DROP COLUMN IF EXISTS id_con_contratos');
-            // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' ADD COLUMN id_con_contratos INT(11) UNSIGNED NULL AFTER id_fin_eventos');
-            // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' ADD CONSTRAINT `fk-fin_rubricas-id_con_contratos-con_contratos-id` FOREIGN KEY (`id_con_contratos`) REFERENCES ' . $this::TABELA_RUBRICAS . '(`id`) ON UPDATE CASCADE ON DELETE NO ACTION');
-        } else {
-            echo "\n";
-            echo $this::TABELA_CONTRATOS . " ainda não foi criada\n";
-            echo "Operação abortada...\n";
-            return false;
-        }
+        // if ($this->getTableExist($this::TABELA_CONTRATOS)) {
+        //     echo "*** Criar chave extrangeira fk-fin_rubricas-id_con_contratos-con_contratos-id ***";
+        //     // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' DROP FOREIGN KEY IF EXISTS `fk-fin_rubricas-id_fin_eventos-fin_eventos-id`');
+        //     // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' DROP COLUMN IF EXISTS id_con_contratos');
+        //     // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' ADD COLUMN id_con_contratos INT(11) UNSIGNED NULL AFTER id_fin_eventos');
+        //     // $this->execute('ALTER TABLE ' . $this::TABELA_RUBRICAS . ' ADD CONSTRAINT `fk-fin_rubricas-id_con_contratos-con_contratos-id` FOREIGN KEY (`id_con_contratos`) REFERENCES ' . $this::TABELA_RUBRICAS . '(`id`) ON UPDATE CASCADE ON DELETE NO ACTION');
+        // } else {
+        //     echo "\n";
+        //     echo $this::TABELA_CONTRATOS . " ainda não foi criada\n";
+        //     echo "Operação abortada...\n";
+        //     return false;
+        // }
+        return true;
     }
 
     /**
