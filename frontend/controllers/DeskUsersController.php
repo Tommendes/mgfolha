@@ -347,7 +347,7 @@ class DeskUsersController extends Controller
             //                return Json::encode($usuario->getErrors());
             //            }
         } else {
-            $status = DeskUsers::STATUS_ATIVO;
+            $status = DeskUsers::STATUS_INATIVO;
             $usuario = new DeskUsers();
             $usuario->status = 10;
             $usuario->status_desk = $status;

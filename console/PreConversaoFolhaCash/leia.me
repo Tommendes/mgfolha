@@ -5,6 +5,11 @@
     A) - Só prosseguir após o ConversorMFolhaCash não apresentar mais nenhum erro de importação
 #05 MySQL: Executar console\PreConversaoFolhaCash\MySql\CriarTabelasFinanceiroEMensal.sql
 #06 Fbd: Exportar os dados das tabelas Financeiro e Mensal como SQL
+    A) Financeiro: 
+        delete from financeiro f where f.n_valor > 0
+        select * from financeiro f
+    B) Mensal: 
+        select * from mensal m
 #07 MySQL: Importar os dados das tabelas Financeiro e Mensal
     !!! prompt de comandos (não bash e nem power shell) '''
         Dell
@@ -15,7 +20,11 @@
             c:\xampp\mysql\bin\mysql -f -v -u root mgfolha_import < "D:\TomMe\OneDrive\Área de Trabalho\Mensal.sql"
 #08 Para evitar a perda dos dados em caso de erro no passo a seguir, copie o banco de dados mgfolha_import para outro banco vazio ou crie um DUMP(cópia)
 #09 Executar para limpar a base de valores inúteis: 
-    DELETE FROM `mgfolha_import`.financeiro WHERE n_valor = 0;
+    DELETE FROM `mgfolha_import`.financeiro WHERE n_valor <= 0;
+    * Testar e excluir inúteis em mensal
+        SELECT m.idservidor, f.idservidor FROM financeiro f
+        LEFT JOIN mensal m ON m.idservidor = f.idservidor AND f.ano = m.ano AND f.mes = m.mes AND f.parcela = m.parcela
+        WHERE m.idservidor IS NULL
 #10 php yii migrate para popular o banco com as tabelas restantes e converter os dados importados
 
 Se tudo ocorrer até o fim sem erros, a importação terá sido executada

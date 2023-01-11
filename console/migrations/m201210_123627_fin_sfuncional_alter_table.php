@@ -39,7 +39,8 @@ class m201210_123627_fin_sfuncional_alter_table extends Migration
                 . 'ADD COLUMN manad_tiponomeacao VARCHAR(20) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT "Tipo nomeação", '
                 . 'ADD COLUMN manad_numeronomeacao VARCHAR(20) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT "Número nomeação", '
                 . 'ADD COLUMN d_admissao VARCHAR(10) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT "Admissão data", '
-                . 'ADD COLUMN d_tempo VARCHAR(10) COLLATE utf8mb4_general_ci DEFAULT NULL, '
+                . 'ADD COLUMN d_enio_inicio VARCHAR(10) COLLATE utf8mb4_general_ci DEFAULT NULL after enio, '
+                . 'ADD COLUMN d_enio_fim VARCHAR(10) COLLATE utf8mb4_general_ci DEFAULT NULL after d_enio_inicio, '
                 . 'ADD COLUMN d_tempofim VARCHAR(10) COLLATE utf8mb4_general_ci DEFAULT NULL, '
                 . 'ADD COLUMN n_valorbaseinss DECIMAL(15,2) DEFAULT NULL COMMENT "Valor base INSS"');
             echo "*** Importação dos dados em cad_sfuncional para " . $this::TABELA_SFUNCIONAL . " ***";

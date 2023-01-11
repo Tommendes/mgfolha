@@ -52,10 +52,11 @@ class m180725_194435_cad_sfuncional extends Migration {
             'manad_tiponomeacao' => $this->string(20)->comment('Tipo nomeação'),
             'manad_numeronomeacao' => $this->string(255)->comment('Número nomeação'),
             'd_admissao' => $this->string(10)->comment('Admissão data'),
-            'd_tempo' => $this->string(10)->comment(''),
-            'd_tempofim' => $this->string(10)->comment(''),
+            'd_enio_inicio' => $this->string(10)->comment(''),
+            'd_enio_fim' => $this->string(10)->comment(''),
             'd_beneficio' => $this->string(10)->comment(''),
             'n_valorbaseinss' => $this->decimal(15, 2)->comment('Valor base INSS'),
+            'ponto' => $this->integer(11)->comment('Marcação de ponto eletrônico'),
                 ], $tableOptions);
 
         $this->execute('UPDATE ' . $this::TABELA . ' SET ' . $this::TABELA . '.id_vinculo = NULL WHERE ' . $this::TABELA . '.id_vinculo NOT BETWEEN 1 AND 7');
