@@ -363,24 +363,24 @@ class DeskUsersController extends Controller
             $usuario->updated_at = time();
             $usuario->save();
             $usuario->evento = SisEventsController::registrarEvento("Registro criado com sucesso! " . SisEventsController::evt($usuario), 'actionGetDeskversao', isset(Yii::$app->user->identity->id) ? Yii::$app->user->identity->id : 0, $usuario->tableName(), $usuario->id);
-            // if ($usuario->save()) {
-            //     Yii::$app
-            //         ->mailer
-            //         ->compose(
-            //             ['html' => 'newUserToAdm-html', 'text' => 'newUserToAdm-text'],
-            //             ['model' => $usuario]
-            //         )
-            //         ->setFrom([Yii::$app->params['noreplyEmail'] => 'Robô ' . Yii::$app->name])
-            //         ->setTo([Yii::$app->params['adminEmail'] => 'Tom Mendes',])
-            //         ->setSubject(Yii::t('yii', 'Novo usuário Desk') . Yii::t('yii', ' - Message express from ') . Yii::$app->name)
-            //         ->send();
+            if ($usuario->save()) {
+                Yii::$app
+                    ->mailer
+                    ->compose(
+                        ['html' => 'newUserToAdm-html', 'text' => 'newUserToAdm-text'],
+                        ['model' => $usuario]
+                    )
+                    ->setFrom([Yii::$app->params['noreplyEmail'] => 'Robô ' . Yii::$app->name])
+                    ->setTo([Yii::$app->params['adminEmail'] => 'Tom Mendes',])
+                    ->setSubject(Yii::t('yii', 'Novo usuário Desk') . Yii::t('yii', ' - Message express from ') . Yii::$app->name)
+                    ->send();
             }
         }
-        if ($formatResp == null) {
+        // if ($formatResp) {
             $formatResp = Response::FORMAT_JSON;
-        } else {
-            $formatResp = Response::FORMAT_XML;
-        }
+        // } else {
+        //     $formatResp = Response::FORMAT_XML;
+        // }
         Yii::$app->response->format = $formatResp;
         return ([
             'status_desk' => $status,
