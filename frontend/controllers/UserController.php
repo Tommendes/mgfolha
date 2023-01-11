@@ -667,15 +667,15 @@ class UserController extends Controller {
                 ->setSubject(Yii::t('yii', 'Confirmação de cadastro') . Yii::t('yii', ' - Message express from ') . Yii::$app->name)
                 ->send();
 //        Envia email para o(s) adm(s)
-        Yii::$app
-                ->mailer
-                ->compose(
-                        ['html' => 'newUserToAdm-html', 'text' => 'newUserToAdm-text'], ['model' => $model]
-                )
-                ->setFrom([Yii::$app->params['noreplyEmail'] => 'Robô ' . Yii::$app->name])
-                ->setTo([Yii::$app->params['adminEmail'] => 'Administrador',])
-                ->setSubject(Yii::t('yii', 'New user') . Yii::t('yii', ' - Message express from ') . Yii::$app->name)
-                ->send();
+        // Yii::$app
+        //         ->mailer
+        //         ->compose(
+        //                 ['html' => 'newUserToAdm-html', 'text' => 'newUserToAdm-text'], ['model' => $model]
+        //         )
+        //         ->setFrom([Yii::$app->params['noreplyEmail'] => 'Robô ' . Yii::$app->name])
+        //         ->setTo([Yii::$app->params['adminEmail'] => 'Administrador',])
+        //         ->setSubject(Yii::t('yii', 'New user') . Yii::t('yii', ' - Message express from ') . Yii::$app->name)
+        //         ->send();
     }
 
     /**
