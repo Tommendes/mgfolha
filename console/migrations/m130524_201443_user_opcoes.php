@@ -28,8 +28,8 @@ class m130524_201443_user_opcoes extends Migration {
 //            'geo_lt' => $this->string()->comment('Geo Latitude atual'),
 //            'geo_ln' => $this->string()->comment('Geo Longitude atual'),
 //            'evento' => $this->integer(11)->notNull()->comment('Evento do registro')->defaultValue(0),
-//            'created_at' => $this->integer(11)->notNull()->comment('Registro em'),
-//            'updated_at' => $this->integer(11)->notNull()->comment('Atualização em'),
+//            'created_at' => $this->string(255)->notNull()->comment('Registro em'),
+//            'updated_at' => $this->string(255)->notNull()->comment('Atualização em'),
 //                ], $tableOptions);
 //
 //        $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD CONSTRAINT `fk-' . $this::TABELA . '-id_user-user-id` '

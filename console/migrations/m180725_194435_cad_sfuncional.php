@@ -27,8 +27,8 @@ class m180725_194435_cad_sfuncional extends Migration {
             'status' => $this->tinyInteger()->notNull()->defaultValue(10),
             'dominio' => $this->string()->notNull()->comment('Domínio do cliente'),
             'evento' => $this->integer(11)->notNull()->comment('Evento do registro')->defaultValue(0),
-            'created_at' => $this->integer(11)->notNull()->comment('Registro em'),
-            'updated_at' => $this->integer(11)->notNull()->comment('Atualização em'),
+            'created_at' => $this->string(255)->notNull()->comment('Registro em'),
+            'updated_at' => $this->string(255)->notNull()->comment('Atualização em'),
             'ano' => $this->string(4)->notNull()->comment('Ano'),
             'mes' => $this->string(2)->notNull()->comment('Mês'),
             'complementar' => $this->string(3)->notNull()->comment('complementar'),
@@ -57,6 +57,8 @@ class m180725_194435_cad_sfuncional extends Migration {
             'd_beneficio' => $this->string(10)->comment(''),
             'n_valorbaseinss' => $this->decimal(15, 2)->comment('Valor base INSS'),
             'ponto' => $this->integer(11)->comment('Marcação de ponto eletrônico'),
+            'd_tempo' => $this->string(10),
+            'd_tempofim' => $this->string(10),
                 ], $tableOptions);
 
         $this->execute('UPDATE ' . $this::TABELA . ' SET ' . $this::TABELA . '.id_vinculo = NULL WHERE ' . $this::TABELA . '.id_vinculo NOT BETWEEN 1 AND 7');

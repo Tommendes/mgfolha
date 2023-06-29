@@ -27,8 +27,8 @@ class m180828_131123_fin_eventosbase extends Migration {
             'status' => $this->tinyInteger()->notNull()->defaultValue(10),
             'dominio' => $this->string()->notNull()->comment('Domínio do cliente'),
             'evento' => $this->integer(11)->notNull()->comment('Evento do registro')->defaultValue(0),
-            'created_at' => $this->integer(11)->notNull()->comment('Registro em'),
-            'updated_at' => $this->integer(11)->notNull()->comment('Atualização em'),
+            'created_at' => $this->string(255)->notNull()->comment('Registro em'),
+            'updated_at' => $this->string(255)->notNull()->comment('Atualização em'),
             'id_fin_eventos' => $this->integer(11)->notNull()->comment('Codigo evento'),
             'id_fin_eventosbase' => $this->integer(11)->notNull()->comment('Codigo evento base'),
                 ], $tableOptions);

@@ -6,10 +6,9 @@
 #05 MySQL: Executar console\PreConversaoFolhaCash\MySql\CriarTabelasFinanceiroEMensal.sql
 #06 Fbd: Exportar os dados das tabelas Financeiro e Mensal como SQL
     A) Financeiro: 
-        delete from financeiro f where f.n_valor > 0
-        select * from financeiro f
+        select * from financeiro f where n_valor > 0 order by ano, mes, parcela, idservidor
     B) Mensal: 
-        select * from mensal m
+        select m.* from mensal m order by m.ano, m.mes, m.parcela, m.idservidor
 #07 MySQL: Importar os dados das tabelas Financeiro e Mensal
     !!! prompt de comandos (não bash e nem power shell) '''
         Dell

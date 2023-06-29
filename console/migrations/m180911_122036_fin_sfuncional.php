@@ -65,23 +65,23 @@ class m180911_122036_fin_sfuncional extends Migration
             // Atualiza dados na tabela
             $this->setUpdateTable();
 
-            echo "*** Excluir índices ***";
-            //     $this->dropIndex('`' . $this::TABELA . '_slug_unique`', $this::TABELA);
-            $this->dropIndex('`' . $this::TABELA . '_dom-serv-ano-mes-parcela`', $this::TABELA);
-            $this->dropIndex("`fk-" . $this::TABELA . "-id_cad_servidores-cad_servidores-id`", $this::TABELA);
-            $this->dropIndex("`fk-" . $this::TABELA . "-cargos-cad_cargos-id`", $this::TABELA);
-            $this->dropIndex("`fk-" . $this::TABELA . "-centros-cad_centros-id`", $this::TABELA);
-            $this->dropIndex("`fk-" . $this::TABELA . "-departamentos-cad_departamentos-id`", $this::TABELA);
-            $this->dropIndex("`fk-" . $this::TABELA . "-pccs-cad_pccs-id`", $this::TABELA);
+            // echo "*** Excluir índices ***";
+            // //     $this->dropIndex('`' . $this::TABELA . '_slug_unique`', $this::TABELA);
+            // $this->dropIndex('`' . $this::TABELA . '_dom-serv-ano-mes-parcela`', $this::TABELA);
+            // $this->dropIndex("`fk-" . $this::TABELA . "-id_cad_servidores-cad_servidores-id`", $this::TABELA);
+            // $this->dropIndex("`fk-" . $this::TABELA . "-cargos-cad_cargos-id`", $this::TABELA);
+            // $this->dropIndex("`fk-" . $this::TABELA . "-centros-cad_centros-id`", $this::TABELA);
+            // $this->dropIndex("`fk-" . $this::TABELA . "-departamentos-cad_departamentos-id`", $this::TABELA);
+            // $this->dropIndex("`fk-" . $this::TABELA . "-pccs-cad_pccs-id`", $this::TABELA);
 
-            echo "*** Recriar índices ***";
-            //     $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD UNIQUE INDEX `' . $this::TABELA . '_slug_unique` '
-            //             . '(slug)');
-            $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD UNIQUE INDEX `' . $this::TABELA . '_dom-serv-ano-mes-parcela` '
-                . '(dominio, id_cad_servidores, ano, mes, parcela)');
-            $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD CONSTRAINT `fk-' . $this::TABELA . '-servidores-cad_servidores-id`'
-                . 'FOREIGN KEY (id_cad_servidores) REFERENCES cad_servidores(id) '
-                . 'ON UPDATE CASCADE ON DELETE NO ACTION');
+            // echo "*** Recriar índices ***";
+            // //     $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD UNIQUE INDEX `' . $this::TABELA . '_slug_unique` '
+            // //             . '(slug)');
+            // $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD UNIQUE INDEX `' . $this::TABELA . '_dom-serv-ano-mes-parcela` '
+            //     . '(dominio, id_cad_servidores, ano, mes, parcela)');
+            // $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD CONSTRAINT `fk-' . $this::TABELA . '-servidores-cad_servidores-id`'
+            //     . 'FOREIGN KEY (id_cad_servidores) REFERENCES cad_servidores(id) '
+            //     . 'ON UPDATE CASCADE ON DELETE NO ACTION');
 
             echo "*** Alterações adicionais na estrutura da tabela ***";
             // Segunda alteração na tabela fin_sfuncional. Esta

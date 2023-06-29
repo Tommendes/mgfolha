@@ -25,8 +25,8 @@ class m130524_201443_user_auth extends Migration {
 //        $this->createTable($this::TABELA, [
 //            'id' => $this->primaryKey()->comment('ID do registro'),
 //            'evento' => $this->integer(11)->notNull()->comment('Evento do registro')->defaultValue(0),
-//            'created_at' => $this->integer(11)->notNull()->comment('Registro em'),
-//            'updated_at' => $this->integer(11)->notNull()->comment('Atualização em'),
+//            'created_at' => $this->string(255)->notNull()->comment('Registro em'),
+//            'updated_at' => $this->string(255)->notNull()->comment('Atualização em'),
 //            'id_user' => $this->integer(11)->notNull()->comment('ID do usuário'),
 //            'email' => $this->string()->comment('Email'),
 //            'user' => $this->string()->comment('Usuário'),
