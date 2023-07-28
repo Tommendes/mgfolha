@@ -79,7 +79,7 @@ class m180828_203204_fin_rubricas extends Migration
 
             echo "*** Recriar índices ***";
             $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD UNIQUE INDEX `' . $this::TABELA . '_dom-serv-evtos-ano-mes-parcela` '
-                . '(dominio, id_cad_servidores, id_fin_eventos, ano, mes, parcela)');
+                . '(dominio, status, id_cad_servidores, id_fin_eventos, ano, mes, parcela)');
             $this->execute('ALTER TABLE ' . $this::TABELA . ' ADD CONSTRAINT `fk-' . $this::TABELA . '-id_fin_eventos-fin_eventos-id` '
                 . 'FOREIGN KEY (id_fin_eventos) REFERENCES fin_eventos(id) '
                 . 'ON UPDATE CASCADE ON DELETE NO ACTION');
