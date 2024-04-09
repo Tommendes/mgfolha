@@ -21,7 +21,7 @@ $components = [
         // ],
         'cacimbinhas_antigo' => [
             'class' => 'common\components\ConnectionExtra',
-            'dsn' => 'mysql:host=162.214.208.90;dbname=mgfolha_folhacacimbinhas',
+            'dsn' => 'mysql:host=217.196.61.20;dbname=mgfolha_folhacacimbinhas',
             'dbname' => 'mgfolha_folhacacimbinhas',
         ],
         //        'ftp' => [ 
