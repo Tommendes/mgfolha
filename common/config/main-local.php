@@ -4,7 +4,7 @@ $components = [
     'components' => [
         'db' => [
             'class' => 'common\components\ConnectionExtra',
-            'dsn' => 'mysql:host=217.196.61.201;dbname=mgfolha_folha',
+            'dsn' => 'mysql:host=http://162.214.208.90/;dbname=mgfolha_folha',
             'dbname' => 'mgfolha_folha',
         ],
         // Conexões adicionais de bancos de dados sendo um para cada cliente
